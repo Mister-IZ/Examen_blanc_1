@@ -9,6 +9,7 @@ body {
 
 h1 {
     text-align: center;
+    color: rgb(255, 255, 255);
 }
 
 h2 {
@@ -42,10 +43,15 @@ a {
     color: #3498db;
     text-decoration: none;
     margin-left: 10px;
+    transition: color 1s ease; /* Ajout d'une transition pour un changement de couleur en douceur */
+
+    /* Effet de soulignement au survol */
+    border-bottom: 1px solid transparent;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #b929b9;
+    border-bottom: 1px solid #2980b9; /* Ajout d'une bordure inférieure au survol */
 }
 
 
