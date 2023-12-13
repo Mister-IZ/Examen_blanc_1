@@ -1,0 +1,42 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fond sombre */
+    color: #fff; /* Couleur du texte */
+}
+
+.container {
+    max-width: 600px; /* Largeur maximale pour la vidéo */
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1, h3 {
+    text-align: center;
+    padding: 20px;
+}
+
+video {
+    width: 100%;
+    max-height: 300px; /* Hauteur maximale pour la vidéo */
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

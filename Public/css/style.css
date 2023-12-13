@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    background-image: url('/image/broken.png');
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+    color: rgb(177, 177, 177);
+}
+
+.bouton{
+    border-radius: 8 px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+/* Style pour les liens dans les listes */
+a {
+    color: #3498db;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+

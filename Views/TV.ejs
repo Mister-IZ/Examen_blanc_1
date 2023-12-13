@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/css/style.css">
+<h1>TV list</h1>
+
+<h2>Télévision désirée</h2>
+<ul>
+  <% for(tv of wishList) { %>
+    <li><%= tv.Marque %> | <%= tv. Prix %>€ | <%= tv.Taille %> pouces - <a href="/delete/<%= tv.idtv %>">Delete</a> <a href="/bought/<%= tv.idtv %>">Acheter</a></li>
+  <% } %>
+</ul>
+
+
+<h2>Télévisions achetées en bonne état</h2>
+<ul>
+    <% for(tv of ownedList) { %>
+        <li>
+            <form action="/break/<%= tv.idtv %>" method="post">
+            <%= tv.Marque %> | <%= tv.Prix %>€ | <%= tv.Taille %> pouces → 
+            Si ça ne fonctionne plus, précisez la cause: <input type="text" name="cause" placeholder="Saisir la cause" required>
+                <input value="Bye" type="submit">  
+            </form>
+        </li>
+    <% } %>
+</ul>
+
+
+
+<h2>Télévisions en mauvaise état</h2>
+<ul>
+    <% for(tv of breakList) { %>
+      <li><%= tv.Marque %> | <%= tv.Prix %>€ | <%= tv.Cause %> - <a href="/delete/<%= tv.idtv %>">Jeter/Recycler</a></li>
+    <% } %>
+</ul>
+
+
+<form action="/add" method="POST">
+    Marque : <input name="Marque" /><br>
+    Prix : <input name="Prix" type="number" min="0" /><br>
+    Taille : <input name="Taille" type="number" min="32" max="85" placeholder="Entre 32 et 85 pouces" style="width: 200px;" /><br>
+    <!-- Acheter <input type="checkbox"><br>
+    Fonctionnel <input type="checkbox" /><br>
+    Cause <input name="" /><br> -->
+    <br><br>
+    <input value="Tout est rempli ? Tu peux envoyer !" type="submit" />
+
+</form>
