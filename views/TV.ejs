@@ -1,6 +1,18 @@
 <link rel="stylesheet" href="/css/style.css">
 <h1>TV list</h1>
 
+<form action="/add" method="POST" style="text-align: center;">
+  Marque : <input name="Marque" /><br>
+  Prix : <input name="Prix" type="number" min="0" /><br>
+  Taille : <input name="Taille" type="number" min="32" max="85" placeholder="Entre 32 et 85 pouces" style="width: 200px;" /><br>
+  <!-- Acheter <input type="checkbox"><br>
+  Fonctionnel <input type="checkbox" /><br>
+  Cause <input name="" /><br> -->
+  <br><br>
+  <input value="Tout est rempli ? Tu peux envoyer !" type="submit" />
+
+</form>
+
 <h2>Télévision désirée</h2>
 <ul>
   <% for(tv of wishList) { %>
@@ -31,15 +43,13 @@
     <% } %>
 </ul>
 
+<% let result = 0 ;%>
+<% for(tv of ownedList) { %>
+<%  result += tv.Prix };%>
+<h3 style="text-align: right;"> Total payé : <span style="color: green;"><%- result %>€</span> </h3>
+<% let result1 = 0 ;%>
+<% for(tv of breakList) { %>
+<%  result1 += tv.Prix };%>
+<h3 style="text-align: right;"> Argent perdu : <span style="color: red;"><%- result1 %>€</span> </h3>
 
-<form action="/add" method="POST">
-    Marque : <input name="Marque" /><br>
-    Prix : <input name="Prix" type="number" min="0" /><br>
-    Taille : <input name="Taille" type="number" min="32" max="85" placeholder="Entre 32 et 85 pouces" style="width: 200px;" /><br>
-    <!-- Acheter <input type="checkbox"><br>
-    Fonctionnel <input type="checkbox" /><br>
-    Cause <input name="" /><br> -->
-    <br><br>
-    <input value="Tout est rempli ? Tu peux envoyer !" type="submit" />
 
-</form>
