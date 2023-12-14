@@ -27,6 +27,7 @@ app.post("/add", async function (req, res){
     newligne.Prix = req.body.Prix
     newligne.Taille = req.body.Taille
     newligne.Acheter = 0
+    newligne.Fonctionnel = 0
     await newligne.save();
     res.redirect("/contenu")
 })
