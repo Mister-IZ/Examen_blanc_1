@@ -43,13 +43,20 @@
     <% } %>
 </ul>
 
-<% let result = 0 ;%>
+
+<% let result = 0; %>
 <% for(tv of ownedList) { %>
-<%  result += tv.Prix };%>
-<h3 style="text-align: right;"> Total payé : <span style="color: green;"><%- result %>€</span> </h3>
-<% let result1 = 0 ;%>
+    <% result += tv.Prix; %>
+<% } %>
+<% let result1 = 0; %>
 <% for(tv of breakList) { %>
-<%  result1 += tv.Prix };%>
-<h3 style="text-align: right;"> Argent perdu : <span style="color: red;"><%- result1 %>€</span> </h3>
+    <% result1 += tv.Prix; %>
+<% } %>
+<% let resulte = result1 + result; %>
+
+<h3 style="text-align: right;"> Total paiement : <%- resulte %>€ </h3>
+<h3 style="text-align: right;"> Total en bonne état : <span style="color: green;"><%- result %>€</span> </h3>
+<h3 style="text-align: right;"> Argent perdu : <span style="color: red;"> - <%- result1 %>€</span> </h3>
+
 
 
