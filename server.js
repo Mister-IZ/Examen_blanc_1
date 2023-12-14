@@ -1,5 +1,5 @@
 import express from 'express';
-import Tv_List from './models/Tele.js';
+import Tv_List from './Models/Tele.js';
 
 
 const app = express();
